@@ -1,0 +1,23 @@
+• npx create-expo-app@latest curso-react-native-metacritic-app --template blank
+• npm start
+• npx expo install react-dom react-native-web @expo/metro-runtime
+• Estilos => npm i -D @react-native/eslint-config
+• npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier @react-native/eslint-config
+  1) cambiar la config es eslint.config: 
+// https://docs.expo.dev/guides/using-eslint/
+const { defineConfig } = require('eslint/config');
+const expoConfig = require("eslint-config-expo/flat");
+
+module.exports = defineConfig([
+  expoConfig,
+  {
+    ignores: ["dist/*"],
+    extends: ["expo", "prettier"],
+    plugins: ['prettier'],
+    rules: {
+      'prettier/prettier': 'error'
+    }
+  }
+]);
+ 2) agrega extensiones: prettier code formatter
+
