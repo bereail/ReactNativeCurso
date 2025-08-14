@@ -21,3 +21,7 @@ module.exports = defineConfig([
 ]);
  2) agrega extensiones: prettier code formatter
 
+
+
+
+instalae esta dependencia para cuidad los bodes -> npx expo install react-native-safe-area-context
